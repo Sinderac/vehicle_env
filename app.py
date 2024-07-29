@@ -22,7 +22,7 @@ if graph_type == "Histograma":
         st.write('Creación de un histograma para el conjunto de datos de anuncios de venta de carros')
 
         # Crear un histograma
-        fig_hist = px.histogram(car_data, x="odemeter", y= "price", title=f'Histograma de Odemeter vs Precio')
+        fig_hist = px.histogram(car_data, x="odometer", y= "price", title=f'Histograma de Odemeter vs Precio')
         
         # Mostrar el gráfico
         st.plotly_chart(fig_hist, use_container_width=True)

@@ -13,12 +13,7 @@ st.header("Selección de Gráfico")
 graph_type = st.radio("Seleccione el tipo de gráfico:", ("Histograma", "Gráfica de Dispersión"))
 
 if graph_type == "Histograma":
-    st.write("Seleccione una columna para el eje X y una para el eje Y para construir un histograma.")
-
-    # Selección de la columna para el histograma
-    selected_column_hist = st.selectbox("Seleccione la columna para el eje X (Histograma)", car_data.columns.tolist())
-    y_column_hist = st.selectbox("Seleccione la columna para el eje Y (Histograma)", car_data.columns.tolist())
-        
+          
     # Crear un botón para el histograma
     hist_button = st.button("Construir Histograma")
 

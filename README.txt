@@ -1,3 +1,4 @@
-El proposito de esta es aplicacion es poder representar los datos del dataframe como el usuario desee. 
-Puede elegir entre histograma o dispersión y escoger las variables X y Y para graficar.
+El proposito de esta es aplicacion es poder comparar odometer vs precio, ya sea en un histograma o grafica de dispersion.
 Al final se muestra un dataframe con los datos.
+
+Link de render https://vehicle-env.onrender.com

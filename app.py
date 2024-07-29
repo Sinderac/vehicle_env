@@ -27,17 +27,12 @@ if graph_type == "Histograma":
         st.write('Creación de un histograma para el conjunto de datos de anuncios de venta de carros')
 
         # Crear un histograma
-        fig_hist = px.histogram(car_data, x=selected_column_hist, y= y_column_hist, title=f'Histograma de {selected_column_hist}')
+        fig_hist = px.histogram(car_data, x="odemeter", y= "price", title=f'Histograma de Odemeter vs Precio')
         
         # Mostrar el gráfico
         st.plotly_chart(fig_hist, use_container_width=True)
 
 elif graph_type == "Gráfica de Dispersión":
-    st.write("Seleccione una columna para el eje X y una para el eje Y para construir una gráfica de dispersión.")
-
-    # Selección de columnas para la gráfica de dispersión
-    selected_column_scat = st.selectbox("Seleccione la columna para el eje X (Dispersión)", car_data.columns.tolist())
-    y_column_scat = st.selectbox("Seleccione la columna para el eje Y (Dispersión)", car_data.columns.tolist())
 
     # Crear un botón para la gráfica de dispersión
     scat_button = st.button('Construir Gráfica de Dispersión')
@@ -47,7 +42,7 @@ elif graph_type == "Gráfica de Dispersión":
         st.write('Creación de una gráfica de dispersión para el conjunto de datos de anuncios de venta de carros')
 
         # Crear una gráfica de dispersión
-        fig_scat = px.scatter(car_data, x=selected_column_scat, y=y_column_scat, title=f'Gráfica de Dispersión de {y_column_scat} según {selected_column_scat}')
+        fig_scat = px.scatter(car_data, x="odometer", y="price", title=f'Gráfica de Dispersión de Odemeter vs Precio')
         
         # Mostrar el gráfico
         st.plotly_chart(fig_scat, use_container_width=True)
